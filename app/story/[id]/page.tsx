@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { StoryRenderer } from "@/components/story-renderer";
 import { PresentationMode } from "@/components/presentation-mode";
 import { ExportButton } from "@/components/export-button";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 import type { StoryState } from "@/types";
 
 export default function StoryPage({
@@ -76,6 +77,7 @@ export default function StoryPage({
             New Analysis
           </Button>
           <div className="flex items-center gap-2">
+            <ThemeSwitcher />
             <Button
               variant="outline"
               onClick={() => setPresenting(true)}
