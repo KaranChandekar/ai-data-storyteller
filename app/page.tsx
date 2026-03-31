@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { FileUpload } from "@/components/file-upload";
 import { DataPreview } from "@/components/data-preview";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import type { ColumnSchema } from "@/types";
@@ -79,6 +80,15 @@ export default function HomePage() {
 
   return (
     <main className="flex-1">
+      {/* Header */}
+      <header className="flex items-center justify-between px-4 sm:px-6 py-4 border-b">
+        <div className="flex items-center gap-2">
+          <BarChart3 className="h-5 w-5 text-primary" />
+          <span className="font-semibold text-sm sm:text-base">AI Data Storyteller</span>
+        </div>
+        <ThemeSwitcher />
+      </header>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         {/* Background gradient blobs */}
